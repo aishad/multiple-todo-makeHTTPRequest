@@ -7,9 +7,17 @@
     </form>
     Showing list <span id="listName"></span>
     <form onSubmit="addItemSubmit()">
-        Item to add <input type="text" id="itemInput" oninput="addItemInputChanged()" />
+        Item to add <input type="text" id="itemInput" onchange="addItemInputChanged()" />
         <input type="submit">
     </form>
+    <form onSubmit="importListSubmit()">
+        List name you'd like to copy <input type="text" id="importName" onchange="importListName()" />
+        <input type="submit"> 
+    </form>
+    <button onClick="clearList()">Click to remove items</button>
+    <button onClick="reverseList()">Click to reverse iteams</button>
+
+
     <ul id="items"></ul>
     <script src="app.js"></script>
 </body>
